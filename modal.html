@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbershop | Онлайн запись</title>
+  <link rel="icon" href="images/favicon.svg" type="images/x-icon">
+  <link rel="shortcut icon" href="images/favicon.svg" type="images/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="body body--modal" style="background-image: url(images/modal-bg.jpg);">
+
+  <form class="modal" action="#">
+    <div class="modal__inner">
+      <button class="modal__back" type="button" onclick="window.history.go(-1)">назад</button>
+      <h1 class="modal__title">Онлайн-запись</h1>
+      <ul class="modal__list">
+        <li class="modal__item">
+          <label class="modal__name" for="name">Ваше имя *</label>
+          <input class="modal__field" type="text" placeholder="введите ваше имя сюда" required>
+        </li>
+        <li class="modal__item">
+          <label class="modal__name" for="phone">Ваш номер телефона *</label>
+          <input class="modal__field" data-tel-input type="text" id="phone" name="phone"
+            placeholder="введите ваш номер сюда" required>
+        </li>
+        <li class="modal__item">
+          <label class="modal__name" for="services">Выберите услугу *</label>
+          <select class="modal__field  modal__services" id="services" name="services">
+            <option value="">классическая стрижка</option>
+            <option value="">бритье бороды</option>
+            <option value="">бритье усов</option>
+            <option value="">наложение камуфляжа</option>
+            <option value="">окрашивание волос</option>
+            <option value="">стрижка детская</option>
+            <option value="">коррекция бороды</option>
+            <option value="">горячий воск</option>
+            <option value="">камуфляж седых волос</option>
+            <option value="">стрижка детская</option>
+            <option value="">коррекция бороды</option>
+            <option value="">горячий воск</option>
+            <option value="">камуфляж седых волос</option>
+          </select>
+        </li>
+        <li class="modal__item">
+          <label class="modal__name" for="barber">Выберите барбера</label>
+          <select class="modal__field modal__barbers" id="barber" name="barber">
+            <option value="">Артем</option>
+            <option value="">Ярослав</option>
+            <option value="">Владимир</option>
+            <option value="">Павел</option>
+          </select>
+        </li>
+      </ul>
+      <p class="modal__text">
+        Если вы хотите выбрать себе определенного барбера (это необязательное действие), то советуем вам прочитать на
+        странице <a href="about.html">“О Нас”</a> о наших барберах
+      </p>
+      <button class="btn btn--red" type="submit">Записаться</button>
+    </div>
+  </form>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

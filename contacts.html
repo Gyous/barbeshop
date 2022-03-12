@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbershop | Контакты</title>
+  <link rel="icon" href="images/favicon.svg" type="images/x-icon">
+  <link rel="shortcut icon" href="images/favicon.svg" type="images/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="body">
+
+<header class="header">
+  <button class="btn-menu">
+    <span class="btn-menu__line"></span>
+    <span class="btn-menu__line"></span>
+    <span class="btn-menu__line"></span>
+  </button>
+  <div class="container">
+    <div class="header__inner">
+      <a class="logo header__logo" href="index.html">
+        <img class="logo__img" src="images/icons/logo.svg" alt="" width="105" height="60">
+      </a>
+      <ul class="menu">
+        <li class="menu__item">
+          <a class="menu__link menu__link--active" href="index.html">Главная</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="about.html">О нас</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="services.html">Услуги</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="gallery.html">Галерея</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="blog.html">Блог</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="contacts.html">Контакты</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="contacts">
+    <div class="container">
+      <h1 class="title">Звоните или закажите стрижку прямо сейчас</h1>
+      <div class="contacts__inner">
+        <ul class="contacts__address">
+          <li class="contacts__item">
+            <span class="contacts__title">Наша почта</span>
+            <a class="contacts__link" href="mailto:barbershop@gmail.com">barbershop@gmail.com</a>
+          </li>
+          <li class="contacts__item">
+            <span class="contacts__title">Телефон</span>
+            <a class="contacts__link" href="tel:+77777777777">+7 777 777 77 77</a>
+          </li>
+          <li class="contacts__item">
+            <span class="contacts__title">Наш адрес</span>
+            <a class="contacts__link" href="https://goo.gl/maps/FTuEY8YSgmxAbpaz8" target="_blank">ул. Роз, 6/6а, Сочи,
+              Краснодарский край, 354000</a>
+          </li>
+        </ul>
+        <form class="contacts__form" action="#">
+          <ul class="contacts__fields">
+            <li class="contacts__form-item">
+              <label class="contacts__form-title" for="name">Ваше имя *</label>
+              <input class="contacts__field" type="text" placeholder="введите ваше имя сюда" id="name" name="name" required>
+            </li>
+            <li class="contacts__form-item">
+              <label class="contacts__form-title" for="service">Выберите услугу *</label>
+              <select class="contacts__field contacts__services" id="service" name="service">
+                <option value="">классическая стрижка</option>
+                <option value="">бритье бороды</option>
+                <option value="">бритье усов</option>
+                <option value="">наложение камуфляжа</option>
+                <option value="">окрашивание волос</option>
+                <option value="">стрижка детская</option>
+                <option value="">коррекция бороды</option>
+                <option value="">горячий воск</option>
+                <option value="">камуфляж седых волос</option>
+              </select>
+            </li>
+            <li class="contacts__form-item">
+              <label class="contacts__form-title" for="phone">Ваш номер телефона *</label>
+              <input class="contacts__field" data-tel-input type="tel" id="phone" name="phone" required placeholder="введите ваш номер сюда" maxlength="20">
+            </li>
+            <li class="contacts__form-item">
+              <label class="contacts__form-title" for="data">выберите дату бронирования</label>
+              <input class="contacts__field" type="text" id="data" name="data" required readonly placeholder="дд/мм/гг">
+            </li>
+            <li class="contacts__form-item">
+              <label class="contacts__form-title" for="message">Ваше сообщение</label>
+              <textarea class="contacts__field contacts__textarea" id="message" name="message" placeholder="введите ваше сообщение"></textarea>
+            </li>
+          </ul>
+          <button class="btn btn--red" type="submit">отправить</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d722.4938900265931!2d39.718833875761824!3d43.586225395286256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f5cbd26ac581ad%3A0x15114e8e2240a650!2z0YPQuy4g0KDQvtC3LCA2LzbQsCwg0KHQvtGH0LgsINCa0YDQsNGB0L3QvtC00LDRgNGB0LrQuNC5INC60YDQsNC5LCAzNTQwMDA!5e0!3m2!1sru!2sru!4v1646735789480!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</main>
+<footer class="footer">
+  <div class="footer__top" style="background-image: url(images/footer-bg.jpg);">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__col">
+          <a class="logo" href="#">
+            <img class="logo__img" src="images/icons/logo.svg" alt="" width="190" height="110">
+          </a>
+        </div>
+        <address class="footer__address">
+          <a class="phone" href="tel:777777777">+7 777 777 77 77</a>
+          <p class="footer__text">
+            ул. Роз, 6/6а, Сочи, <br> Краснодарский край, 354000
+          </p>
+          <a class="footer__email" href="mailto:barbershop@gmail.com">Наш email - barbershop@gmail.com</a>
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use xlink:href="images/sprite.svg#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use xlink:href="images/sprite.svg#insta"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use xlink:href="images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </address>
+        <form class="subscribe-form" action="#">
+  <h3 class="subscribe-form__title">Подпишитесь на нашу рассылку</h3>
+  <p class="subscribe-form__text">
+    Подпишитесь на еженедельную рассылку специальных предложений и акций
+  </p>
+  <div class="subscribe-form__data">
+    <label class="sr-only" for="email">подписаться на рассылку</label>
+    <input class="subscribe-form__field" type="email" placeholder="Введите email" name="email" id="email" required>
+    <button class="subscribe-form__btn btn">подписаться</button>
+  </div>
+</form>
+      </div>
+    </div>
+  </div>
+  <div class="footer__copy">Все права защищены @Barbershop</div>
+</footer>
+<script src="js/main.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbershop | Галлерея</title>
+  <link rel="icon" href="images/favicon.svg" type="images/x-icon">
+  <link rel="shortcut icon" href="images/favicon.svg" type="images/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="body">
+
+<header class="header">
+  <button class="btn-menu">
+    <span class="btn-menu__line"></span>
+    <span class="btn-menu__line"></span>
+    <span class="btn-menu__line"></span>
+  </button>
+  <div class="container">
+    <div class="header__inner">
+      <a class="logo header__logo" href="index.html">
+        <img class="logo__img" src="images/icons/logo.svg" alt="" width="105" height="60">
+      </a>
+      <ul class="menu">
+        <li class="menu__item">
+          <a class="menu__link menu__link--active" href="index.html">Главная</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="about.html">О нас</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="services.html">Услуги</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="gallery.html">Галерея</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="blog.html">Блог</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="contacts.html">Контакты</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="gallery">
+    <div class="container">
+      <h1 class="title">Галерея работ наших мастеров</h1>
+      <ul class="gallery__filters">
+        <li class="gallery__filters-item">
+          <button class="gallery__btn" type="button" data-filter="all">Все</button>
+        </li>
+        <li class="gallery__filters-item">
+          <button class="gallery__btn" type="button" data-filter=".haircut">стрижка</button>
+        </li>
+        <li class="gallery__filters-item">
+          <button class="gallery__btn" type="button" data-filter=".shaving">бритье бороды и усов</button>
+        </li>
+        <li class="gallery__filters-item">
+          <button class="gallery__btn" type="button" data-filter=".coloring">окрашивание волос</button>
+        </li>
+      </ul>
+      <ul class="gallery__list">
+        <li class="gallery__item mix shaving">
+          <img class="gallery__img" src="images/gallery/1.jpg" alt="барбершоп бритье бороды" width="630" height="450">
+        </li>
+        <li class="gallery__item mix haircut">
+          <img class="gallery__img" src="images/gallery/2.jpg" alt="барбершоп стрижка" width="630" height="450">
+        </li>
+        <li class="gallery__item mix shaving">
+          <img class="gallery__img" src="images/gallery/3.jpg" alt="барбершоп бритье бороды и усов" width="630" height="450">
+        </li>
+        <li class="gallery__item mix haircut">
+          <img class="gallery__img" src="images/gallery/4.jpg" alt="барбершоп стрижка" width="630" height="450">
+        </li>
+        <li class="gallery__item mix coloring">
+          <img class="gallery__img" src="images/gallery/5.jpg" alt="барбершоп окрашивание волос" width="630" height="450">
+        </li>
+        <li class="gallery__item mix coloring">
+          <img class="gallery__img" src="images/gallery/6.jpg" alt="барбершоп окрашивание волос" width="630" height="450">
+        </li>
+        <li class="gallery__item mix coloring">
+          <img class="gallery__img" src="images/gallery/7.jpg" alt="барбершоп окрашивание волос" width="630" height="450">
+        </li>
+        <li class="gallery__item mix shaving">
+          <img class="gallery__img" src="images/gallery/8.jpg" alt="барбершоп бритье усов и бороды" width="630" height="450">
+        </li>
+      </ul>
+    </div>
+    <ul class="pagination__list">
+  <li class="pagination__item pagination__item--back pagination__item--direction">
+    <a class="pagination__link" href="#">Back</a>
+  </li>
+  <li class="pagination__item">
+    <a class="pagination__link" href="#">1</a>
+  </li>
+  <li class="pagination__item">
+    <a class="pagination__link" href="#">2</a>
+  </li>
+  <li class="pagination__item">
+    <a class="pagination__link pagination__link--active" href="#">3</a>
+  </li>
+  <li class="pagination__item pagination__item--next pagination__item--direction">
+    <a class="pagination__link" href="#">Next</a>
+  </li>
+</ul>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__top" style="background-image: url(images/footer-bg.jpg);">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__col">
+          <a class="logo" href="#">
+            <img class="logo__img" src="images/icons/logo.svg" alt="" width="190" height="110">
+          </a>
+        </div>
+        <address class="footer__address">
+          <a class="phone" href="tel:777777777">+7 777 777 77 77</a>
+          <p class="footer__text">
+            ул. Роз, 6/6а, Сочи, <br> Краснодарский край, 354000
+          </p>
+          <a class="footer__email" href="mailto:barbershop@gmail.com">Наш email - barbershop@gmail.com</a>
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use xlink:href="images/sprite.svg#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use xlink:href="images/sprite.svg#insta"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use xlink:href="images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </address>
+        <form class="subscribe-form" action="#">
+  <h3 class="subscribe-form__title">Подпишитесь на нашу рассылку</h3>
+  <p class="subscribe-form__text">
+    Подпишитесь на еженедельную рассылку специальных предложений и акций
+  </p>
+  <div class="subscribe-form__data">
+    <label class="sr-only" for="email">подписаться на рассылку</label>
+    <input class="subscribe-form__field" type="email" placeholder="Введите email" name="email" id="email" required>
+    <button class="subscribe-form__btn btn">подписаться</button>
+  </div>
+</form>
+      </div>
+    </div>
+  </div>
+  <div class="footer__copy">Все права защищены @Barbershop</div>
+</footer>
+<script src="js/main.min.js"></script>
+</body>
+
+</html>
