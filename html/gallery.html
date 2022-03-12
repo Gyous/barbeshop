@@ -1,0 +1,57 @@
+@include('components/_head.html',{
+title: "Barbershop | Галлерея"
+})
+
+@include('components/_header.html')
+<main>
+  <section class="gallery">
+    <div class="container">
+      <h1 class="title">Галерея работ наших мастеров</h1>
+      <ul class="gallery__filters">
+        <li class="gallery__filters-item">
+          <button class="gallery__btn" type="button" data-filter="all">Все</button>
+        </li>
+        <li class="gallery__filters-item">
+          <button class="gallery__btn" type="button" data-filter=".haircut">стрижка</button>
+        </li>
+        <li class="gallery__filters-item">
+          <button class="gallery__btn" type="button" data-filter=".shaving">бритье бороды и усов</button>
+        </li>
+        <li class="gallery__filters-item">
+          <button class="gallery__btn" type="button" data-filter=".coloring">окрашивание волос</button>
+        </li>
+      </ul>
+      <ul class="gallery__list">
+        <li class="gallery__item mix shaving">
+          <img class="gallery__img" src="images/gallery/1.jpg" alt="барбершоп бритье бороды" width="630" height="450">
+        </li>
+        <li class="gallery__item mix haircut">
+          <img class="gallery__img" src="images/gallery/2.jpg" alt="барбершоп стрижка" width="630" height="450">
+        </li>
+        <li class="gallery__item mix shaving">
+          <img class="gallery__img" src="images/gallery/3.jpg" alt="барбершоп бритье бороды и усов" width="630" height="450">
+        </li>
+        <li class="gallery__item mix haircut">
+          <img class="gallery__img" src="images/gallery/4.jpg" alt="барбершоп стрижка" width="630" height="450">
+        </li>
+        <li class="gallery__item mix coloring">
+          <img class="gallery__img" src="images/gallery/5.jpg" alt="барбершоп окрашивание волос" width="630" height="450">
+        </li>
+        <li class="gallery__item mix coloring">
+          <img class="gallery__img" src="images/gallery/6.jpg" alt="барбершоп окрашивание волос" width="630" height="450">
+        </li>
+        <li class="gallery__item mix coloring">
+          <img class="gallery__img" src="images/gallery/7.jpg" alt="барбершоп окрашивание волос" width="630" height="450">
+        </li>
+        <li class="gallery__item mix shaving">
+          <img class="gallery__img" src="images/gallery/8.jpg" alt="барбершоп бритье усов и бороды" width="630" height="450">
+        </li>
+      </ul>
+    </div>
+    @include('components/_pagination.html')
+  </section>
+
+</main>
+
+@include('components/_footer.html')
+@include('components/_end.html')

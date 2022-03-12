@@ -1,0 +1,161 @@
+.modal {
+  max-width: 1200px;
+  width: 100%;
+  z-index: 50;
+  margin: 0 auto;
+  position: relative;
+
+  &__inner {
+    background-color: $black600;
+    border-radius: 10px;
+    line-height: 1;
+    padding: 40px;
+
+    @include r($lg) {
+      padding: 25px;
+    }
+
+    @include r($sm) {
+      padding: 20px;
+      height: auto;
+      border-radius: 0;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-family: $lora;
+    font-weight: $fw-700;
+
+    @include r($lg) {
+      font-size: 28px;
+    }
+
+    @include r($tablet) {
+      margin-bottom: 35px;
+      font-size: 24px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    margin-bottom: 50px;
+
+    @include r($tablet) {
+      display: block;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    line-height: 1.3;
+    font-size: 18px;
+    max-width: 750px;
+    width: 100%;
+
+    @include r($sm) {
+      font-size: 16px;
+    }
+
+    a {
+      color: $red600;
+      font-weight: $fw-600;
+      border-bottom: 2px solid transparent;
+      transition: border 0.3s;
+
+      &:hover {
+        border-color: $red600;
+      }
+    }
+  }
+
+  &__item {
+    &:not(last-child) {
+      @include r($tablet) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__name {
+    margin-bottom: 25px;
+    font-weight: $fw-500;
+    text-transform: uppercase;
+    display: block;
+
+    @include r($lg) {
+      margin-bottom: 15px;
+    }
+
+    @include r($sm) {
+      font-size: 20px;
+    }
+  }
+
+  &__field {
+    max-width: 550px;
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid $gray600;
+    transition: border 0.3s;
+
+    @include r($lg) {
+      padding: 15px;
+    }
+
+    @include r($tablet) {
+      font-size: 20px;
+      max-width: 100%;
+    }
+
+    @include r($phone) {
+      font-size: 18px;
+    }
+
+    &::placeholder {
+      transition: color 0.3s;
+    }
+
+    &:hover {
+      border-color: $red600;
+
+      &::placeholder {
+        color: $white;
+      }
+    }
+  }
+
+  &__back {
+    text-transform: uppercase;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    transition: color 0.3s;
+
+    @include r($lg) {
+      font-size: 20px;
+    }
+
+    @include r($sm) {
+      font-size: 18px;
+      position: static;
+      margin-bottom: 30px;
+      display: inline-block;
+      margin-left: auto;
+    }
+
+    &:hover {
+      color: $red600;
+    }
+  }
+
+  .btn {
+    font-weight: $fw-400;
+  }
+}

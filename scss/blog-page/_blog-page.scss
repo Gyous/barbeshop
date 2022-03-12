@@ -1,0 +1,163 @@
+.blog-page {
+  &__intro {
+    position: relative;
+    @include bg;
+    height: calc(100vh - 120px);
+    margin-bottom: 60px;
+
+    @include r($lg) {
+      height: 100vh;
+    }
+
+    @include r($sm) {
+      margin-bottom: 30px;
+    }
+
+    &::before {
+      @include bg-black;
+      background-color: rgba($black, 0.6);
+    }
+  }
+
+  &__inner {
+    height: calc(100vh - 120px);
+    padding: 100px 0 30px;
+    position: relative;
+    z-index: 10;
+    @include flex-column;
+
+    @include r($lg) {
+      height: 100vh;
+    }
+
+    @include r($sm) {
+      padding-bottom: 15px;
+    }
+  }
+
+  &__title,
+  &__text {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 58px;
+    line-height: 1.3;
+    font-family: $lora;
+    font-weight: $fw-700;
+    text-transform: uppercase;
+    max-width: 800px;
+    margin-bottom: auto;
+
+    @include r($desktop-lg) {
+      font-size: 46px;
+    }
+
+    @include r($lg) {
+      font-size: 40px;
+    }
+
+    @include r($sm) {
+      font-size: 34px;
+    }
+
+    @include r($phone) {
+      font-size: 30px;
+    }
+  }
+
+  &__text {
+    line-height: 1.75;
+    font-weight: $fw-600;
+    margin-bottom: 50px;
+    font-size: 20px;
+    max-width: 700px;
+
+    @include r($sm) {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__date {
+    font-weight: $fw-700;
+    font-family: $roboto;
+    padding-bottom: 10px;
+    border-bottom: 5px solid $brown800;
+
+    @include r($desktop-lg) {
+      font-size: 20px;
+    }
+
+    @include r($sm) {
+      font-size: 16px;
+    }
+  }
+
+  &__numbers {
+    color: $brown800;
+  }
+
+  &__container {
+    max-width: 930px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+
+    @include r($tablet) {
+      margin-bottom: 80px;
+    }
+
+    @include r($sm) {
+      margin-bottom: 40px;
+    }
+
+    h3 {
+      font-weight: $fw-800;
+      font-size: 32px;
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+      color: $brown800;
+
+      @include r($sm) {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+    }
+
+    p {
+      font-weight: $fw-600;
+      line-height: 1.75;
+      font-size: 20px;
+      margin-bottom: 30px;
+
+      @include r($phone) {
+        font-size: 18px;
+      }
+    }
+
+    img {
+      @include objectbg;
+      margin-bottom: 30px;
+
+      @include r($sm) {
+        height: 330px;
+      }
+
+      @include r($phone) {
+        height: 280px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__block {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}

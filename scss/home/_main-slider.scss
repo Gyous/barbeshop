@@ -1,0 +1,157 @@
+.main-slider {
+  height: calc(100vh - 120px);
+
+  @include r($lg) {
+    padding-top: 60px;
+    height: 100vh;
+  }
+
+  @include r($tablet) {
+    padding-top: 0;
+  }
+
+  &__slide {
+    position: relative;
+    @include bg;
+
+    &::after {
+      @include bg-black;
+      z-index: -1;
+    }
+  }
+
+  &__content {
+    height: 100vh;
+    @include flex-column;
+    justify-content: center;
+    max-width: 750px;
+    width: 100%;
+    padding: 0 15px;
+
+    @include r($desktop) {
+      margin: 0 auto;
+      text-align: center;
+      padding: 0;
+    }
+  }
+
+  &__title {
+    font-family: $roboto;
+    font-weight: $fw-700;
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 40px;
+
+    @include r($desktop) {
+      margin-bottom: 25px;
+    }
+
+    @include r($desktop-lg) {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    @include r($lg) {
+      font-size: 36px;
+      line-height: 40px;
+      margin-bottom: 15px;
+    }
+
+    @include r($tablet) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    @include r($sm) {
+      font-size: 26px;
+      line-height: 32px;
+    }
+
+    @include r($phone) {
+      font-size: 22px;
+    }
+  }
+
+  &__address {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 25px;
+
+    @include r($desktop-lg) {
+      font-size: 22px;
+      line-height: 28px;
+      margin-bottom: 15px;
+    }
+
+    @include r($tablet) {
+      font-size: 20px;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    @include top50;
+    font-size: 0;
+    z-index: 100;
+    transition: box-shadow 0.3s;
+    border-radius: 3px;
+
+    @include r($lg) {
+      display: none;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px $red800;
+    }
+
+    &:hover {
+      .main-slider__icon {
+        fill: $red300;
+      }
+    }
+
+    &--prev {
+      left: 2%;
+    }
+
+    &--next {
+      right: 2%;
+    }
+  }
+
+  &__icon {
+    width: 45px;
+    height: 40px;
+    fill: $red800;
+    transition: fill 0.3s;
+  }
+
+  .swiper-button-disabled {
+    pointer-events: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    .main-slider__icon {
+      fill: $gray800;
+    }
+  }
+
+  .phone {
+    @include r($desktop) {
+      margin: 0 auto;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background-color: $gray100;
+
+    &-active {
+      background-color: $red500;
+    }
+  }
+}

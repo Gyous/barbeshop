@@ -1,0 +1,109 @@
+.offer {
+  padding: 40px 0 120px;
+
+  @include r($desktop) {
+    padding: 0 0 80px;
+  }
+
+  @include r($desktop-lg) {
+    padding-bottom: 60px;
+  }
+
+  @include r($tablet) {
+    padding-bottom: 30px;
+  }
+
+  .title {
+    margin-bottom: 15px;
+
+    @include r($desktop-lg) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    max-width: 630px;
+    width: 100%;
+    margin-bottom: 70px;
+    line-height: 1.4;
+
+    span {
+      color: $red600;
+    }
+
+    @include r($desktop) {
+      margin-bottom: 40px;
+      font-size: 20px;
+    }
+
+    @include r($sm) {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px 50px;
+
+    @include r($desktop-lg) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 40px;
+    }
+
+    @include r($tablet) {
+      grid-template-columns: repeat(1, 1fr);
+      text-align: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 26px;
+    line-height: 1;
+    font-weight: $fw-600;
+    margin-bottom: 20px;
+
+    @include r($lg) {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    @include r($sm) {
+      font-size: 22px;
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    line-height: 1.4;
+    color: $gray600;
+    margin-bottom: 15px;
+
+    @include r($sm) {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__price {
+    align-self: flex-start;
+    margin-top: auto;
+    color: $red600;
+    padding-bottom: 2px;
+    border-bottom: 2px solid $red600;
+
+    @include r($tablet) {
+      align-self: center;
+    }
+
+    @include r($sm) {
+      font-size: 22px;
+    }
+  }
+}

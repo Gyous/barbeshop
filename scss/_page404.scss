@@ -1,0 +1,76 @@
+.page404 {
+  @include bg;
+  position: relative;
+
+  &::before {
+    @include bg-black;
+  }
+
+  &__inner {
+    height: calc(100vh - 120px);
+    position: relative;
+    z-index: 10;
+    max-width: 730px;
+    width: 100%;
+    @include flex-column;
+    justify-content: center;
+
+    @include r($lg) {
+      height: 100vh;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 48px;
+    line-height: 1;
+    font-weight: $fw-700;
+    color: $red600;
+
+    @include r($lg) {
+      margin-bottom: 20px;
+      font-size: 42px;
+    }
+
+    @include r($tablet) {
+      font-size: 34px;
+    }
+
+    @include r($sm) {
+      font-size: 28px;
+    }
+  }
+
+  &__text {
+    font-size: 36px;
+    font-weight: $fw-600;
+    margin-bottom: 30px;
+
+    @include r($lg) {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    @include r($tablet) {
+      font-size: 26px;
+    }
+
+    @include r($sm) {
+      font-size: 22px;
+    }
+  }
+
+  .btn {
+    padding: 16px 50px;
+    align-self: flex-start;
+
+    @include r($tablet) {
+      padding: 16px 35px;
+    }
+
+    @include r($sm) {
+      padding: 16px 26px;
+      font-size: 16px;
+    }
+  }
+}

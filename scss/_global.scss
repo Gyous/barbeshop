@@ -1,0 +1,217 @@
+.body {
+  background-color: $black900;
+  color: $white;
+  font-size: 22px;
+  font-family: $manrope;
+  font-weight: $fw-400;
+  line-height: 1.2;
+  user-select: none;
+
+  &--active {
+    overflow: hidden;
+    touch-action: none;
+  }
+
+  &--modal {
+    position: relative;
+    @include bg;
+    @include flex-column;
+    justify-content: center;
+    height: 100vh;
+
+    @include r($sm) {
+      height: auto;
+    }
+
+    &::after {
+      @include bg-black;
+      height: 100vh;
+      z-index: -1;
+    }
+  }
+}
+
+.container {
+  max-width: 1330px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.btn {
+  font-weight: $fw-700;
+  border: 1px solid $red300;
+  font-size: 18px;
+  line-height: 1;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  transition: background-color 0.3s, border 0.3s;
+  display: inline-block;
+
+  &:focus {
+    border-color: $red800;
+  }
+
+  &:hover {
+    background-color: $red300;
+  }
+
+  &:active {
+    background-color: transparent;
+  }
+
+  &--red {
+    background-color: $red300;
+    border-color: transparent;
+
+    &:hover {
+      background-color: rgba($red300, 0.7);
+    }
+
+    &:active {
+      border-color: transparent;
+    }
+  }
+}
+
+.logo {
+  display: inline-block;
+  transition: opacity 0.3s, box-shadow 0.3s;
+  border-radius: 3px;
+
+  &:focus {
+    box-shadow: 0 0 0 2px $red600;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    box-shadow: none;
+    opacity: 0.6;
+  }
+
+  &__img {
+    @include bg;
+  }
+}
+
+.phone {
+  font-family: $roboto;
+  font-weight: $fw-300;
+  padding: 5px;
+  padding-left: 50px;
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 28px;
+  color: $white;
+  display: block;
+  max-width: max-content;
+  border-radius: 3px;
+  transition: box-shadow 0.3s, color 0.3s;
+
+  @include r($sm) {
+    font-size: 22px;
+    padding-left: 35px;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px $red600;
+  }
+
+  &:hover {
+    color: $red600;
+  }
+
+  &::before {
+    @include pseudo;
+    @include top50;
+    @include bg;
+    width: 35px;
+    height: 35px;
+    left: 0;
+    background-image: url('../images/icons/icon-phone.svg');
+    transition: background-color 0.3s;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(201deg) brightness(106%) contrast(106%);
+
+    @include r($sm) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.title {
+  font-size: 48px;
+  font-weight: $fw-700;
+  max-width: 570px;
+  width: 100%;
+  position: relative;
+
+  &--sub {
+    font-size: 40px;
+  }
+
+  @include title-adaptive;
+}
+
+.jq-selectbox {
+  &__dropdown {
+    width: 100%;
+    left: 0;
+    top: 46px;
+    background-color: $black;
+    border: 1px solid $gray800;
+
+    ul {
+      padding: 10px 0;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $red600;
+      }
+    }
+
+    li {
+      padding: 3px 15px;
+      cursor: pointer;
+      transition: color 0.3s;
+      color: $gray800;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      &:hover {
+        color: $red600;
+      }
+    }
+  }
+
+  .selected {
+    color: $white;
+  }
+}

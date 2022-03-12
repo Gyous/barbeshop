@@ -1,0 +1,67 @@
+@include('components/_head.html',{
+title: "Barbershop | Контакты"
+})
+
+@include('components/_header.html')
+<main>
+  <section class="contacts">
+    <div class="container">
+      <h1 class="title">Звоните или закажите стрижку прямо сейчас</h1>
+      <div class="contacts__inner">
+        <ul class="contacts__address">
+          <li class="contacts__item">
+            <span class="contacts__title">Наша почта</span>
+            <a class="contacts__link" href="mailto:barbershop@gmail.com">barbershop@gmail.com</a>
+          </li>
+          <li class="contacts__item">
+            <span class="contacts__title">Телефон</span>
+            <a class="contacts__link" href="tel:+77777777777">+7 777 777 77 77</a>
+          </li>
+          <li class="contacts__item">
+            <span class="contacts__title">Наш адрес</span>
+            <a class="contacts__link" href="https://goo.gl/maps/FTuEY8YSgmxAbpaz8" target="_blank">ул. Роз, 6/6а, Сочи,
+              Краснодарский край, 354000</a>
+          </li>
+        </ul>
+        <form class="contacts__form" action="#">
+          <ul class="contacts__fields">
+            <li class="contacts__form-item">
+              <label class="contacts__form-title" for="name">Ваше имя *</label>
+              <input class="contacts__field" type="text" placeholder="введите ваше имя сюда" id="name" name="name" required>
+            </li>
+            <li class="contacts__form-item">
+              <label class="contacts__form-title" for="service">Выберите услугу *</label>
+              <select class="contacts__field contacts__services" id="service" name="service">
+                <option value="">классическая стрижка</option>
+                <option value="">бритье бороды</option>
+                <option value="">бритье усов</option>
+                <option value="">наложение камуфляжа</option>
+                <option value="">окрашивание волос</option>
+                <option value="">стрижка детская</option>
+                <option value="">коррекция бороды</option>
+                <option value="">горячий воск</option>
+                <option value="">камуфляж седых волос</option>
+              </select>
+            </li>
+            <li class="contacts__form-item">
+              <label class="contacts__form-title" for="phone">Ваш номер телефона *</label>
+              <input class="contacts__field" data-tel-input type="tel" id="phone" name="phone" required placeholder="введите ваш номер сюда" maxlength="20">
+            </li>
+            <li class="contacts__form-item">
+              <label class="contacts__form-title" for="data">выберите дату бронирования</label>
+              <input class="contacts__field" type="text" id="data" name="data" required readonly placeholder="дд/мм/гг">
+            </li>
+            <li class="contacts__form-item">
+              <label class="contacts__form-title" for="message">Ваше сообщение</label>
+              <textarea class="contacts__field contacts__textarea" id="message" name="message" placeholder="введите ваше сообщение"></textarea>
+            </li>
+          </ul>
+          <button class="btn btn--red" type="submit">отправить</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d722.4938900265931!2d39.718833875761824!3d43.586225395286256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f5cbd26ac581ad%3A0x15114e8e2240a650!2z0YPQuy4g0KDQvtC3LCA2LzbQsCwg0KHQvtGH0LgsINCa0YDQsNGB0L3QvtC00LDRgNGB0LrQuNC5INC60YDQsNC5LCAzNTQwMDA!5e0!3m2!1sru!2sru!4v1646735789480!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</main>
+@include('components/_footer.html')
+@include('components/_end.html')

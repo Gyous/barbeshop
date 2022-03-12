@@ -1,0 +1,185 @@
+.info {
+  padding: 80px 0;
+
+  @include r($desktop-lg) {
+    padding: 60px 0 30px;
+  }
+
+  @include r($lg) {
+    padding: 30px 0;
+  }
+
+  @include r($sm) {
+    padding: 20px 0 30px;
+  }
+
+  &--about,
+  &--services {
+    padding-top: 80px;
+  }
+
+  &__inner {
+    @include flexBetween;
+    align-items: flex-start;
+
+    @include r($desktop-lg) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .title {
+    @include r($desktop-lg) {
+      margin-bottom: 30px;
+    }
+
+    @include r($sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+    max-width: 570px;
+    width: 100%;
+
+    @include r($desktop-lg) {
+      max-width: 100%;
+    }
+  }
+
+  &__text,
+  &__career {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-size: 20px;
+
+    @include r($phone) {
+      font-size: 18px;
+    }
+  }
+
+  &__career {
+    @include flexBetween;
+
+    @include r($desktop-lg) {
+      flex-direction: column;
+    }
+  }
+
+  &__career-item {
+    max-width: 270px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include r($desktop-lg) {
+      max-width: 100%;
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__career-title {
+    font-size: 26px;
+    font-weight: $fw-700;
+    margin-bottom: 15px;
+
+    @include r($sm) {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__career-text {
+    font-size: 16px;
+    color: $gray600;
+    margin-top: auto;
+    line-height: 28px;
+  }
+
+  .btn {
+    @include r($desktop-lg) {
+      padding: 10px 30px;
+    }
+  }
+
+  &__img {
+    @include objectbg;
+    width: 100%;
+    margin-bottom: 50px;
+
+    @include r($desktop-lg) {
+      height: 400px;
+    }
+
+    @include r($lg) {
+      height: 350px;
+    }
+
+    @include r($tablet) {
+      height: 300px;
+      margin-bottom: 40px;
+    }
+
+    @include r($phone) {
+      height: 275px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__description {
+    @include flexBetween;
+    font-weight: $fw-500;
+    line-height: 1.4;
+
+    @include r($tablet) {
+      flex-direction: column;
+      font-size: 20px;
+    }
+
+    @include r($phone) {
+      font-size: 18px;
+    }
+  }
+
+  &__item {
+    max-width: 630px;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+
+      @include r($tablet) {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+
+        @include r($tablet) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    @include r($tablet) {
+      max-width: 100%;
+    }
+  }
+
+  &__services-item {
+    font-weight: $fw-400;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}

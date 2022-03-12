@@ -1,0 +1,25 @@
+@mixin font-face($font-family, $url, $weight) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url('../fonts/#{$url}.woff2') format("woff2"),
+        url('../fonts/#{$url}.woff') format("woff");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: normal;
+  }
+}
+
+@include font-face(Roboto, Roboto-Light, 300);
+@include font-face(Roboto, Roboto-Regular, 400);
+@include font-face(Roboto, Roboto-Medium, 500);
+@include font-face(Roboto, Roboto-Bold, 700);
+
+@include font-face(Lora, Lora-Semibold, 600);
+@include font-face(Lora, Lora-Bold, 700);
+
+@include font-face(Manrope, Manrope-Light, 300);
+@include font-face(Manrope, Manrope-Regular, 400);
+@include font-face(Manrope, Manrope-Medium, 500);
+@include font-face(Manrope, Manrope-Semibold, 600);
+@include font-face(Manrope, Manrope-Bold, 700);
+@include font-face(Manrope, Manrope-ExtraBold, 800);

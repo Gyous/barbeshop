@@ -1,0 +1,169 @@
+.work {
+  padding: 150px 0;
+  position: relative;
+  background-image: url('../images/work-bg.jpg');
+  @include bg;
+
+  @include r($desktop) {
+    padding: 110px 0;
+  }
+
+  @include r($desktop-lg) {
+    padding: 70px 0;
+    text-align: center;
+  }
+
+  @include r($tablet) {
+    padding: 50px 0;
+  }
+
+  &::before {
+    @include bg-black;
+  }
+
+  .title {
+    text-transform: uppercase;
+    max-width: 100%;
+    font-size: 38px;
+
+    @include r($desktop) {
+      font-size: 32px;
+    }
+
+    @include r($desktop-lg) {
+      font-size: 28px;
+    }
+
+    @include r($sm) {
+      font-size: 26px;
+    }
+
+    @include r($phone) {
+      font-size: 24px;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+
+    @include r($desktop-lg) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    margin-right: 100px;
+    max-width: 610px;
+    width: 100%;
+
+    @include r($desktop) {
+      margin-right: 30px;
+    }
+
+    @include r($desktop-lg) {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 50px;
+    }
+
+    @include r($tablet) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__content-title {
+    margin-bottom: 25px;
+
+    @include r($desktop-lg) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    max-width: 455px;
+    width: 100%;
+    margin-bottom: 50px;
+    line-height: 1.35;
+
+    @include r($desktop-lg) {
+      font-size: 20px;
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+
+    @include r($tablet) {
+      margin-bottom: 15px;
+    }
+
+    @include r($phone) {
+      font-size: 18px;
+    }
+  }
+
+  &__hours {
+    max-width: 600px;
+    width: 100%;
+
+    @include r($desktop-lg) {
+      max-width: 100%;
+    }
+  }
+
+  &__hours-title {
+    margin-bottom: 70px;
+
+    @include r($desktop-lg) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 35px;
+    font-size: 32px;
+    line-height: 38px;
+
+    @include r($desktop) {
+      font-size: 28px;
+      line-height: 32px;
+    }
+
+    @include r($desktop-lg) {
+      font-size: 24px;
+      line-height: 28px;
+      grid-gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include r($tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include r($sm) {
+      font-size: 22px;
+    }
+
+    @include r($phone) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__day {
+    font-weight: $fw-700;
+    text-transform: uppercase;
+  }
+
+  .btn {
+    @include r($desktop-lg) {
+      padding: 15px;
+    }
+
+    @include r($tablet) {
+      font-size: 16px;
+    }
+  }
+}

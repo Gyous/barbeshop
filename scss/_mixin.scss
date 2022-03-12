@@ -1,0 +1,123 @@
+@mixin line-clamp($lines: 1) {
+  @if $lines <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
+@mixin h($height) {
+  @media (max-height: #{$height}px) {
+    @content;
+  }
+}
+
+@mixin flexBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin pseudo {
+  content: "";
+  position: absolute;
+}
+
+@mixin top50 {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin bg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+@mixin objectbg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  object-fit: cover;
+}
+
+@mixin mask {
+  mask-size: cover;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
+@mixin checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+@mixin radio-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+@mixin bg-black {
+  @include pseudo;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($black, 0.75);
+  z-index: 0;
+}
+
+@mixin title-adaptive {
+  @include r($desktop-lg) {
+    font-size: 40px;
+    max-width: 100%;
+    margin: 0 auto 50px;
+  }
+
+  @include r($lg) {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  @include r($tablet) {
+    font-size: 30px;
+  }
+
+  @include r($sm) {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  @include r($phone) {
+    font-size: 24px;
+  }
+}

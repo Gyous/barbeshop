@@ -1,0 +1,251 @@
+.body__preview {
+  background-color: #171A35;
+  font-family: $roboto;
+
+  &--active {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
+.preview {
+  padding-top: 65px;
+  max-width: 1620px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include r(1300) {
+    padding-top: 30px;
+  }
+
+  @include r($tablet) {
+    padding-top: 20px;
+  }
+
+  &__top,
+  &__list,
+  &__content {
+    display: flex;
+  }
+
+  &__top {
+    align-items: center;
+    margin-bottom: 30px;
+    flex-direction: column;
+
+    @include r(1300) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__top-links {
+    margin-bottom: 20px;
+
+    @include r(1300) {
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &__top-link {
+    transition: color 0.3s;
+
+    &:hover {
+      color: #F46961;
+    }
+  }
+
+  &__title {
+    font-size: 44px;
+    line-height: 1;
+    font-weight: $fw-400;
+
+    @include r($sm) {
+      font-size: 38px;
+    }
+
+    @include r($phone) {
+      font-size: 30px;
+    }
+  }
+
+
+  &__btn {
+    width: 32px;
+    height: 16px;
+    display: none;
+    position: relative;
+    z-index: 55;
+
+    &:hover {
+      .preview__line {
+        background-color: #F46961;
+      }
+    }
+
+    &--active {
+      height: 30px;
+
+      .preview__line {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .preview__line:first-child {
+        transform: rotate(-45deg);
+      }
+
+      .preview__line:last-child {
+        width: 32px;
+        transform: rotate(45deg);
+      }
+    }
+
+    @include r(1300) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__line {
+    display: block;
+    background-color: #FFC492;
+    transition: background-color 0.3s, transform 0.3s;
+    height: 3px;
+
+    &:first-child {
+      width: 32px;
+      margin-bottom: 8px;
+    }
+
+    &:last-child {
+      width: 24px;
+    }
+  }
+
+  &__list {
+    font-size: 20px;
+
+    @include r(1300) {
+      flex-direction: column;
+      text-align: center;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 20;
+      background-color: #171A35;
+      padding-top: 50px;
+      font-size: 26px;
+      transition: transform 0.5s;
+      transform: translateX(-200%);
+
+      &--active {
+        transform: translateX(0%);
+      }
+    }
+
+    @include r($phone) {
+      font-size: 24px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include r(1300) {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__link {
+    transition: color 0.3s;
+    border-bottom: 2px solid transparent;
+    transition: border 0.3s;
+
+    &:hover {
+      color: #F46961;
+      border-color: #F46961;
+    }
+  }
+
+  &__bottom {
+    @include bg;
+    background-image: url('../images/preview-bg.jpg');
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @include r(1300) {
+      min-height: 630px;
+    }
+
+    @include r($lg) {
+      min-height: 580px;
+    }
+
+    @include r($tablet) {
+      min-height: 540px;
+      height: calc(100vh - 70px);
+    }
+
+    @include r($sm) {
+      min-height: 470px;
+    }
+
+    &::before {
+      @include pseudo;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba($black, 0.4);
+      z-index: 1;
+    }
+  }
+
+  &__name {
+    display: block;
+    font-size: 144px;
+    line-height: 1;
+    font-weight: $fw-300;
+    letter-spacing: 0.03em;
+    max-width: 1130px;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    padding: 0 15px;
+
+    @include r(1300) {
+      font-size: 120px;
+    }
+
+    @include r($lg) {
+      font-size: 100px;
+    }
+
+    @include r($tablet) {
+      font-size: 78px;
+    }
+
+    @include r($sm) {
+      font-size: 54px;
+    }
+
+    @include r($phone) {
+      font-size: 40px;
+    }
+  }
+}

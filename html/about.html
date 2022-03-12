@@ -1,0 +1,58 @@
+@include('components/_head.html',{
+title: "Barbershop | О Нас"
+})
+
+@include('components/_header.html')
+<main>
+  <section class="info info--about">
+    <div class="container">
+      <div class="info__inner">
+        <h1 class="title">Наша история развития</h1>
+        <div class="info__content">
+          <ul class="info__career">
+            <li class="info__career-item">
+              <span class="info__career-title">Начало с 2016</span>
+              <p class="info__career-text">
+                В 2016 году в самом центре Сочи на улице Роз 6/6А мы открыли для вас двери нашего барбершопа.
+              </p>
+            </li>
+            <li class="info__career-item">
+              <span class="info__career-title">Более 1000 клиентов</span>
+              <p class="info__career-text">
+                Это настоящее мужское место где чтят традиции и по-настоящему любят своё дело
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <img class="info__img" src="images/about/1.jpg" alt="барбершоп интерьер" width="1920" height="500">
+    <div class="container">
+      <ul class="info__description">
+        <li class="info__item">
+          <p>
+            Borodach – не просто сервис, признанный во всем мире. Это культура и традиция мужских клубов, где есть место для юмора, стиля и неформального общения
+          </p>
+          <p>
+            Наш барбер приедет в любой уголок России и соберет команду профессионалов. Ему не стыдно будет уезжать. Вам – приятно стать лидером в городе по качеству услуг для мужчин
+          </p>
+        </li>
+        <li class="info__item">
+          <p>
+            Сегодня у вас появится франшиза OldBoy, а завтра она откроет перед вами неограниченные возможности роста с поддержкой на каждом этапе
+          </p>
+          <p>
+            Мы не просто делаем бизнес. У нас – крепкая мужская дружба, приносящая выгоду всем сторонам. Умеем зарабатывать и умеем отдыхать
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  @include('about/_masters.html')
+  @include('about/_works.html')
+  @include('about/_reviews.html')
+  @include('about/_interior.html')
+  @include('components/_banner.html')
+</main>
+@include('components/_footer.html')
+@include('components/_end.html')

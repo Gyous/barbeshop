@@ -1,0 +1,134 @@
+.discounts {
+  margin-bottom: 60px;
+
+  @include r($desktop-lg) {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    @include flexBetween;
+
+    @include r($tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    max-width: 570px;
+    width: 100%;
+    border: 3px solid $red600;
+
+    @include r($desktop-lg) {
+      flex-direction: column;
+    }
+
+    @include r($tablet) {
+      max-width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-right: 120px;
+
+      @include r($desktop-lg) {
+        margin-right: 40px;
+      }
+
+      @include r($lg) {
+        margin-right: 30px;
+      }
+
+      @include r($tablet) {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+
+  }
+
+  &__img {
+    @include objectbg;
+    @include top50;
+    position: absolute;
+    left: -100px;
+
+    @include r($desktop) {
+      width: 200px;
+      height: 200px;
+      left: -60px;
+    }
+
+    @include r($desktop-lg) {
+      position: static;
+      width: 100%;
+      transform: none;
+    }
+
+    @include r($phone) {
+      height: 160px;
+    }
+  }
+
+  &__info {
+    padding: 65px 30px 65px 165px;
+
+    @include r($desktop) {
+      padding: 50px 30px 50px 165px;
+    }
+
+    @include r($desktop-lg) {
+      padding: 25px;
+    }
+
+    @include r($sm) {
+      padding: 20px;
+    }
+
+    @include r($phone) {
+      padding: 20px 15px;
+    }
+  }
+
+  &__name {
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: $fw-700;
+    display: block;
+
+    @include r($lg) {
+      font-size: 22px;
+    }
+
+    @include r($phone) {
+      font-size: 20px;
+    }
+  }
+
+  &__condition {
+    padding-bottom: 15px;
+    position: relative;
+    font-size: 16px;
+    margin-bottom: 20px;
+    display: block;
+
+    &::after {
+      @include pseudo;
+      width: 100px;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: $red600;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.3;
+
+    @include r($sm) {
+      font-size: 18px;
+    }
+  }
+}

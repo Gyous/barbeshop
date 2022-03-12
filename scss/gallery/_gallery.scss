@@ -1,0 +1,122 @@
+.gallery {
+  padding: 80px 0;
+
+  @include r($tablet) {
+    padding-bottom: 60px;
+  }
+
+  @include r($sm) {
+    padding-bottom: 20px;
+  }
+
+  .title,
+  &__filters,
+  &__list {
+    margin-bottom: 60px;
+
+    @include r($desktop-lg) {
+      margin-bottom: 40px;
+    }
+
+    @include r($phone) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__filters {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include r($lg) {
+      margin-bottom: 20px;
+    }
+
+    @include r($sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__filters-item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    @include r($lg) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn {
+    border: 1px solid $red300;
+    padding: 16px 30px;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: $fw-700;
+    transition: background-color 0.3s, border 0.3s;
+
+    @include r($sm) {
+      padding: 12px 20px;
+      font-size: 16px;
+    }
+
+    &:focus {
+      border-color: $red600;
+    }
+
+    &:hover {
+      background-color: $red300;
+    }
+  }
+
+  .mixitup-control-active {
+    background-color: $red300;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+
+    @include r($desktop-lg) {
+      grid-gap: 30px;
+    }
+
+    @include r($tablet) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__img {
+    filter: saturate(0%);
+    @include objectbg;
+    transition: filter 0.3s;
+
+    @include r($desktop-lg) {
+      height: 400px;
+    }
+
+    @include r($lg) {
+      height: 330px;
+      filter: saturate(100%);
+    }
+
+    @include r($tablet) {
+      grid-gap: 25px;
+      width: 100%;
+      height: 400px;
+    }
+
+    @include r($sm) {
+      height: 350px;
+    }
+
+    @include r($phone) {
+      height: 280px;
+    }
+
+    &:hover {
+      filter: saturate(100%);
+    }
+  }
+}

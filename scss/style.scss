@@ -1,0 +1,55 @@
+@import 'reset';
+@import 'fonts';
+@import 'vars';
+@import 'mixin';
+@import 'libs';
+@import 'global';
+
+// Header и footer
+@import 'components/header';
+@import 'components/footer';
+
+//Home
+@import 'home/main-slider';
+@import 'home/offer';
+@import 'home/work';
+@import 'home/popular-article';
+
+//About
+@import 'about/masters';
+@import 'about/works';
+@import 'about/reviews';
+@import 'about/interior';
+
+//Service
+@import 'services/services';
+
+//Gallery
+@import 'gallery/gallery';
+
+//Blog
+@import 'blog';
+
+//Blog-page
+@import 'blog-page/blog-page';
+@import 'blog-page/discussion';
+@import 'blog-page/opinion';
+
+//Contacts
+@import 'contacts';
+
+//404
+@import 'page404';
+
+//modalWindow
+@import 'modal';
+
+@import 'preview';
+
+// другие компоненты
+@import 'components/info';
+@import 'components/socials';
+@import 'components/subscribe-form';
+@import 'components/banner';
+@import 'components/discounts';
+@import 'components/pagination';

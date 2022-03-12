@@ -1,0 +1,63 @@
+.interior {
+  text-align: center;
+  margin: 20px 0 120px;
+
+  @include r($lg) {
+    margin-bottom: 80px;
+  }
+
+  .title {
+    max-width: 100%;
+    margin-bottom: 60px;
+    padding: 0 15px;
+
+    @include r($lg) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__slide {
+    max-width: 800px;
+    width: 100%;
+    cursor: pointer;
+
+    @include r($desktop-lg) {
+      max-width: 600px;
+    }
+
+    @include r($lg) {
+      max-width: 500px;
+    }
+  }
+
+  &__img {
+    margin: 0 auto;
+    @include objectbg;
+
+    @include r($desktop-lg) {
+      height: 500px;
+    }
+
+    @include r($tablet) {
+      height: 450px;
+    }
+
+    @include r($sm) {
+      height: 375px;
+    }
+
+    @include r($phone) {
+      height: 320px;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 10px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    background-color: $red600;
+  }
+}

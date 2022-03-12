@@ -1,0 +1,100 @@
+.opinion {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto 100px;
+  padding: 0 15px;
+
+  @include r($tablet) {
+    margin-bottom: 80px;
+  }
+
+  @include r($sm) {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 1;
+    font-weight: $fw-500;
+    margin-bottom: 40px;
+
+    @include r($tablet) {
+      margin-bottom: 25px;
+    }
+
+    @include r($sm) {
+      font-size: 28px;
+    }
+
+    @include r($phone) {
+      font-size: 24px;
+    }
+  }
+
+  &__field {
+    color: $white;
+    font-size: 20px;
+    border: 1px solid $gray800;
+    padding: 10px;
+    transition: border 0.3s;
+
+    @include r($phone) {
+      font-size: 18px;
+    }
+
+    &:hover {
+      border-color: $red600;
+    }
+
+    &::placeholder {
+      color: $gray600;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 150px;
+    display: block;
+
+    @include r($tablet) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__bottom {
+    margin-bottom: 30px;
+    display: flex;
+
+    @include r($tablet) {
+      flex-direction: column;
+    }
+
+    .opinion__field {
+      max-width: 420px;
+      width: 100%;
+
+      @include r($tablet) {
+        max-width: 100%;
+      }
+
+      &:not(:last-child) {
+        margin-right: 60px;
+
+        @include r($tablet) {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .btn {
+    padding: 16px 50px;
+
+    @include r($phone) {
+      padding: 16px 35px;
+    }
+  }
+}

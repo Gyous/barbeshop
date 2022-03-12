@@ -1,0 +1,21 @@
+@include('components/_head.html',{
+title: "Страница не найдена"
+})
+
+@include('components/_header.html')
+<div class="page404" style="background-image: url(images/bg404.jpg);">
+  <div class="container">
+    <div class="page404__inner">
+      <span class="page404__title">Что-то пошло не так</span>
+      <p class="page404__text">
+        Страница не найдена, она была устарена, или не существовала вовсе
+      </p>
+      <a class="btn btn--red" href="index.html">вернуться на главную</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+@include('components/_end.html')

@@ -1,0 +1,131 @@
+.popular {
+  padding: 120px 0;
+
+  @include r($desktop-lg) {
+    padding: 100px 0;
+  }
+
+  @include r($lg) {
+    padding: 70px 0;
+  }
+
+  @include r($tablet) {
+    padding: 50px 0;
+  }
+
+  @include r($sm) {
+    padding: 35px 0;
+  }
+
+  &__title {
+    font-size: 40px;
+    margin-bottom: 50px;
+    @include title-adaptive;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
+
+    @include r($desktop-lg) {
+      grid-gap: 40px;
+    }
+  }
+
+  &__item {
+    @include r($lg) {
+      grid-column-start: span 2;
+    }
+
+    &--big {
+      grid-column-start: span 2;
+    }
+  }
+
+  &__img-link {
+    display: block;
+    position: relative;
+
+    &:hover {
+      &::before {
+        background-color: rgba($black, 0.5);
+      }
+    }
+
+    &::before {
+      @include bg-black;
+      z-index: 10;
+      background-color: transparent;
+      transition: background-color 0.3s;
+    }
+  }
+
+  &__img {
+    transition: transform 0.3s;
+    @include objectbg;
+    margin-bottom: 25px;
+    position: relative;
+
+    @include r($desktop-lg) {
+      margin-bottom: 15px;
+    }
+
+    @include r($lg) {
+      width: 100%;
+    }
+
+    @include r($sm) {
+      height: 200px;
+    }
+  }
+
+  &__link {
+    transition: color 0.3s, border 0.3s, opacity 0.3s;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      color: $red500;
+      border-bottom-color: $red500;
+    }
+
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      border-bottom-color: transparent;
+    }
+  }
+
+  &__item-title {
+    display: inline-block;
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: $fw-700;
+
+    @include r($desktop-lg) {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    @include r($tablet) {
+      font-size: 22px;
+    }
+
+    @include r($phone) {
+      font-size: 20px;
+    }
+  }
+
+  &__date {
+    display: block;
+    font-weight: $fw-700;
+    color: $red600;
+    font-size: 24px;
+
+    @include r($desktop-lg) {
+      font-size: 20px;
+    }
+  }
+}

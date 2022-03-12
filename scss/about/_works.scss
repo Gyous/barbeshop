@@ -1,0 +1,52 @@
+.works {
+  margin-bottom: 100px;
+  text-align: center;
+
+  @include r($lg) {
+    margin-bottom: 80px;
+  }
+
+  @include r($tablet) {
+    margin-bottom: 50px;
+  }
+
+  .title {
+    max-width: 100%;
+    margin-bottom: 40px;
+
+    @include r($sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+
+    @include r($desktop-lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include r($sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__img {
+    @include objectbg;
+    object-position: top;
+
+    @include r($desktop-lg) {
+      width: 100%;
+    }
+
+    @include r($lg) {
+      height: 380px;
+    }
+
+    @include r($tablet) {
+      height: 350px;
+    }
+  }
+}

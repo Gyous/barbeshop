@@ -1,0 +1,123 @@
+.services {
+  margin-bottom: 120px;
+
+  @include r($desktop-lg) {
+    margin-bottom: 80px;
+  }
+
+  @include r($lg) {
+    margin-bottom: 60px;
+  }
+
+  @include r($sm) {
+    margin-bottom: 40px;
+  }
+
+  .title {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: center;
+    max-width: 100%;
+
+    @include r($desktop-lg) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    padding: 45px 35px;
+    border: 3px solid $brown800;
+    margin-bottom: 60px;
+    line-height: 1;
+
+    @include r($desktop-lg) {
+      margin-bottom: 45px;
+      padding: 30px;
+    }
+
+    @include r($lg) {
+      margin-bottom: 30px;
+      padding: 25px;
+    }
+
+    @include r($sm) {
+      padding: 20px;
+    }
+  }
+
+  &__item {
+    text-transform: uppercase;
+    font-size: 28px;
+    @include flexBetween;
+
+    @include r($tablet) {
+      flex-direction: column;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__name {
+    padding-right: 30px;
+
+    @include r($lg) {
+      font-size: 24px;
+    }
+
+    @include r($tablet) {
+      padding-right: 0;
+      margin-bottom: 10px;
+    }
+
+    @include r($sm) {
+      font-size: 22px;
+    }
+  }
+
+  &__price {
+    font-size: 24px;
+    font-weight: $fw-600;
+    white-space: nowrap;
+
+    @include r($sm) {
+      font-size: 20px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 36px;
+    margin-bottom: 25px;
+    font-weight: $fw-500;
+
+    @include r($desktop-lg) {
+      font-size: 32px;
+    }
+
+    @include r($lg) {
+      font-size: 28px;
+    }
+
+    @include r($sm) {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    line-height: 1.4;
+
+    p:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    @include r($sm) {
+      font-size: 20px;
+    }
+
+    @include r($phone) {
+      font-size: 18px;
+    }
+  }
+}

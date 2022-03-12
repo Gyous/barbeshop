@@ -1,0 +1,57 @@
+.banner {
+  position: relative;
+  padding: 100px 0;
+  margin-bottom: 120px;
+
+  @include r($desktop-lg) {
+    padding: 75px 0;
+    margin-bottom: 80px;
+  }
+
+  @include r($lg) {
+    padding: 60px 0;
+  }
+
+  @include r($sm) {
+    padding: 40px 0;
+  }
+
+  &::before {
+    @include bg-black;
+    z-index: 0;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 10;
+    margin-left: auto;
+    max-width: 740px;
+    width: 100%;
+  }
+
+  .title {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+    @include r($lg) {
+      margin-bottom: 20px;
+    }
+
+    @include r($phone) {
+      font-size: 22px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    line-height: 1.5;
+
+    @include r($lg) {
+      font-size: 20px;
+    }
+
+    @include r($sm) {
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+.masters {
+  margin-bottom: 100px;
+
+  @include r($lg) {
+    margin-bottom: 70px;
+  }
+
+  @include r($sm) {
+    margin-bottom: 50px;
+  }
+
+  .title {
+    margin-bottom: 60px;
+
+    @include r($desktop-lg) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    @include flexBetween;
+
+    @include r($lg) {
+      flex-direction: column;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      .btn {
+        align-self: flex-end;
+      }
+
+      @include r($lg) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__img {
+    @include objectbg;
+
+    @include r($desktop-lg) {
+      width: 400px;
+      height: auto;
+    }
+
+    @include r($lg) {
+      margin: 0 auto;
+    }
+
+    @include r($sm) {
+      height: 350px;
+    }
+
+    @include r($phone) {
+      height: 300px;
+    }
+  }
+
+  &__info {
+    @include flex-column;
+  }
+
+  &__name {
+    padding-left: 48px;
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: $fw-700;
+    display: block;
+
+    @include r($desktop-lg) {
+      padding-left: 30px;
+      margin-bottom: 20px;
+    }
+
+    @include r($lg) {
+      text-align: center;
+    }
+
+    @include r($sm) {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__description {
+    background-color: $white;
+    color: $black600;
+    line-height: 1.4;
+    font-size: 20px;
+    padding: 30px 48px;
+
+    @include r($desktop-lg) {
+      padding: 20px 30px;
+    }
+
+    @include r($sm) {
+      padding: 20px;
+    }
+
+    @include r($phone) {
+      font-size: 18px;
+      padding: 15px;
+    }
+  }
+
+  .btn {
+    margin-top: auto;
+    align-self: flex-start;
+    text-transform: none;
+    text-transform: uppercase;
+  }
+}

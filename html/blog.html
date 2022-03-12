@@ -1,0 +1,112 @@
+@include('components/_head.html',{
+title: "Barbershop | Блог"
+})
+
+@include('components/_header.html')
+<main>
+  <section class="blog">
+    <div class="container">
+      <h1 class="title">Наш блог</h1>
+      <ul class="blog__list">
+        <li class="blog__item">
+          <a class="blog__item-link" href="blog-page.html">
+            <img class="blog__item-img" src="images/blog/1.jpg" alt="мужские татуировки барбершоп" width="500" height="300">
+          </a>
+          <div class="blog__info">
+            <h3 class="blog__name">мужские татуировки. как выбрать место и стиль тату</h3>
+            <p class="blog__text">
+              Новейшие инструменты и материалы вывели татуировки на новый уровень. Даже те, у кого рисунки на теле
+              ассоциировались исключительно с песней «Кольщик, наколи мне купола», признают, что тату — это искусство.
+            </p>
+            <a class="blog__link" href="blog-page.html">подробнее</a>
+          </div>
+        </li>
+        <li class="blog__item">
+          <a class="blog__item-link" href="blog-page.html">
+            <img class="blog__item-img" src="images/blog/2.jpg" alt="виды бород барбершоп" width="500" height="300">
+          </a>
+          <div class="blog__info">
+            <h3 class="blog__name">Виды бород - борода якорь, борода байкера</h3>
+            <p class="blog__text">
+              Это далеко не полный список бород. Твоя фантазия и принципы, которых ты придерживаются ничем не
+              ограничены. В нашем клубе THE LUMBER ты сможешь реализовать любую идею - от трехдневной легкой щетины до
+              безумных усов Сальвадора Дали.
+            </p>
+            <a class="blog__link" href="blog-page.html">подробнее</a>
+          </div>
+        </li>
+        <li class="blog__item">
+          <a class="blog__item-link" href="blog-page.html">
+            <img class="blog__item-img" src="images/blog/3.jpg" alt="спортивный бокс или военный" width="500" height="300">
+          </a>
+          <div class="blog__info">
+            <h3 class="blog__name">СПОРТИВНЫЙ ИЛИ ВОЕННЫЙ — БОКС И ПОЛУБОКС И В ЧЕМ РАЗНИЦА?</h3>
+            <p class="blog__text">
+              Их популярность растёт с каждым годом. Спортсмены выбирают её за текстурность и минимальный уход. А мы —
+              за яркую историю и адаптивность.
+            </p>
+            <a class="blog__link" href="blog-page.html">подробнее</a>
+          </div>
+        </li>
+        <li class="blog__item">
+          <a class="blog__item-link" href="blog-page.html">
+            <img class="blog__item-img" src="images/blog/4.jpg" alt="Эволюция стиля рами малека" width="500" height="300">
+          </a>
+          <div class="blog__info">
+            <h3 class="blog__name">Эволюция стиля. Рами Малек</h3>
+            <p class="blog__text">
+              Яркие образы на грани китча или классика и кэжуал? На экране Рами Малек удачно перевоплотился в
+              эксцентричного Фредди Меркьюри, однако сам актер предпочитает более простые и при этом стильные вещи.
+            </p>
+            <a class="blog__link" href="blog-page.html">подробнее</a>
+          </div>
+        </li>
+        <li class="blog__item">
+          <a class="blog__item-link" href="blog-page.html">
+            <img class="blog__item-img" src="images/blog/5.jpg" alt="мужские татуировки барбершоп" width="500" height="300">
+          </a>
+          <div class="blog__info">
+            <h3 class="blog__name">Виды бород - борода Ван Дейк, бретта, французская вилка</h3>
+            <p class="blog__text">
+              С 30-х годов прошлого века в Голливуде была популярна борода бретта, или голливудская борода. В наше время
+              этот стиль вновь обрел популярность, во многом благодаря именитым актерам.
+            </p>
+            <a class="blog__link" href="blog-page.html">подробнее</a>
+          </div>
+        </li>
+        <li class="blog__item">
+          <a class="blog__item-link" href="blog-page.html">
+            <img class="blog__item-img" src="images/blog/6.jpg" alt="барбершоп lumber херсон" width="500" height="300">
+          </a>
+          <div class="blog__info">
+            <h3 class="blog__name">Знакомство с барбершопом The Lumber Херсон</h3>
+            <p class="blog__text">
+              THE LUMBER Херсон – ЭТО НЕ ПРОСТО БАРБЕРШОП, ЭТО МУЖСКОЙ КЛУБ! БЕЗУСЛОВНО, У КАЖДОГО МУЖЧИНЫ ЕСТЬ «СВОЯ
+              ТЕРРИТОРИЯ», И НАША ТЕРРИТОРИЯ В ХЕРСОНЕ НАЗЫВАЕТСЯ THE LUMBER.
+            </p>
+            <a class="blog__link" href="blog-page.html">подробнее</a>
+          </div>
+        </li>
+        <li class="blog__item">
+          <a class="blog__item-link" href="blog-page.html">
+            <img class="blog__item-img" src="images/blog/7.jpg" alt="виды бород барбершоп" width="500" height="300">
+          </a>
+          <div class="blog__info">
+            <h3 class="blog__name">Виды бород - Верди, Бальбо, Гарибальди</h3>
+            <p class="blog__text">
+              Итальянский композитор Джузеппе Верди стал родоначальником стиля борода Верди. Форма бороды является
+              округлой, и неполностью покрывает щеки.
+            </p>
+            <a class="blog__link" href="blog-page.html">подробнее</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    @include('components/_pagination.html')
+  </section>
+  @include('components/_banner.html')
+
+</main>
+
+@include('components/_footer.html')
+@include('components/_end.html')

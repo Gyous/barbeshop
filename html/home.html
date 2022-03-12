@@ -1,0 +1,15 @@
+@include('components/_head.html',{
+title: "Barbershop | Главная страница"
+})
+
+@include('components/_header.html')
+<main>
+  <h1 class="sr-only">лучший барбершоп</h1>
+  @include('home/_main-slider.html')
+  @include('components/_info.html')
+  @include('home/_offer.html')
+  @include('home/_work.html')
+  @include('home/_popular-article.html')
+</main>
+@include('components/_footer.html')
+@include('components/_end.html')
